@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @EnableFeignClients
 public class FindAllClient {
 	@Autowired
-	TheClient theClient;
+	UserdetailsClient theClient;
 	
-	@FeignClient(name = "userdetails")
-    interface TheClient {
+	@FeignClient(name = "userdetails", fallbackFactory = UserdetailsFallbackFactory.class)
+    interface UserdetailsClient {
   
         @RequestMapping(path = "/user/listPage", method = RequestMethod.GET)
         String findAll();
