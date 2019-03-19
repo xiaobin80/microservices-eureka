@@ -16,4 +16,4 @@ mvn clean package -DskipTests
 * git repo [spring-cloud-config-repo](https://gitee.com/xiaobin80/spring-cloud-config-repo)
 
 ## launch
-http://localhost:8766/user/listPage
+[user list page](http://localhost:8766/user/listPage)
